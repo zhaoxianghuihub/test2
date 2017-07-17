@@ -1,0 +1,103 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-icon" data-background-color="red">
+                        <i class="material-icons">Y</i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">硬件资源</h4>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th *ngFor="let cell of tableData.headerRow">{{ cell }}</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr *ngFor="let row of tableData.dataRows">
+                                        <td *ngFor="let cell of row">{{cell}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-icon" data-background-color="red">
+                    <i class="material-icons">X</i>
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">部署情况</h4>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="worldMap" class="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header card-header-icon" data-background-color="red">
+                        <i class="material-icons">P</i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">计算资源（cpu）</h4>
+                    </div>
+                    <div id="chartPreferences" class="ct-chart"></div>
+                    <div class="card-footer">
+                        <i class="fa fa-circle text-info"></i> 已用
+                        <i class="fa fa-circle text-warning"></i> 剩余
+                        <br/><a class="title">剩余：7核</a>
+                        <br/><a class="title">已用：15核</a>
+                        <br/><a class="title">总量：22核</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header card-header-icon" data-background-color="red">
+                        <i class="material-icons">N</i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">内存资源</h4>
+                    </div>
+                    <div id="chartPreferences1" class="ct-chart"></div>
+                    <div class="card-footer">
+                        <i class="fa fa-circle text-info"></i> 已用
+                        <i class="fa fa-circle text-warning"></i> 剩余
+                        <br/><a class="title">剩余：66G</a>
+                        <br/><a class="title">已用：30G</a>
+                        <br/><a class="title">总量：96G</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header card-header-icon" data-background-color="red">
+                        <i class="material-icons">C</i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">存储资源</h4>
+                    </div>
+                    <div id="chartPreferences2" class="ct-chart"></div>
+                    <div class="card-footer">
+                        <i class="fa fa-circle text-info"></i> 已用
+                        <i class="fa fa-circle text-warning"></i> 剩余
+                        <br/><a class="title">剩余：1264G</a>
+                        <br/><a class="title">已用：1736G</a>
+                        <br/><a class="title">总量：3000G</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
